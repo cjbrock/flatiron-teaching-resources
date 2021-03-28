@@ -1,0 +1,1 @@
+- No notes for this one - I just walk them through the pairing exercises and help them in the breakout rooms as needed
