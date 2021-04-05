@@ -1,3 +1,18 @@
+###########  NOTE: No starting code because you start a new application for this study group with the Corneal Gem.
+
+# Instantiate a new sinatra app, run through all the setup stuff, talk about all the app things
+
+# Add in a rake console
+
+```ruby
+desc "rake console"
+task :console do
+    Pry.start
+end
+```
+
+
+
 # What are the four basic http routes? 
   GET, POST, DELETE, PUT/PATCH
 
@@ -11,7 +26,7 @@
 # 2. routefile gets too large! can create new files, read them in from the class. create home.html file, hello.html file. Then in app.rb, change code to:
 
   get '/' do 
-    File.read("home.html")
+    File.read("../app/views/home.html")
   end
 
   get '/students' do
@@ -77,7 +92,7 @@
 
     end
 
-# If you want to add a DB connection
+# Possible extensions: Add in relationships, upgrade with a database connections
 
 # environment.rb
 

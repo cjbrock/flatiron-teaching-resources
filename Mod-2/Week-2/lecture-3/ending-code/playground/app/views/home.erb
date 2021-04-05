@@ -1,0 +1,9 @@
+<h1>The best wooden playground ever was <%= @best_playground %></h1>
+
+
+<h2>All these playgrounds rocked!</h2>
+<ul>
+    <% @awesome_playgrounds.each do | pg |  %>
+        <li><%= pg %></li>
+    <% end %>
+</ul>
