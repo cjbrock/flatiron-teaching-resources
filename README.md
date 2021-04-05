@@ -10,6 +10,8 @@ If you've ended up here, you've been granted access by Corinna! Welcome :-) This
 ## Review Docs for the projects:
 ### Sinatra
 
+- What to prioritize in the sinatra section: https://github.com/cjbrock/sinatra-section-resources/blob/master/what-to-prioritize-in-sinatra.md
+- Sinatra project resources: https://docs.google.com/document/d/1tWHAAHg052eXTzLSBt7TJWTWdYl_yQioi8-0w97HFyI/edit#
 
 ### Rails
 
