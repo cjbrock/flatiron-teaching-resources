@@ -2,6 +2,8 @@
 
 If you've ended up here, you've been granted access by Corinna! Welcome :-) This repo is intended for teaching purposes only, so please use it for such! I've dropped all my teaching notes here, as well as beginning and ending code for my study groups. I'll add in some other links that might help as well. You'll notice this is the old curriculum, not flipped. Please use and share as necessary. 
 
+(Please also ignore any snarky comments I've made to myself in my teaching notes. My sense of humor tends to be a bit weird.)
+
 ## My past couple of cohort teaching repo recordings:
 
 - 02/22/21 Full time: https://docs.google.com/spreadsheets/d/1eUJgaCSM2qAKfa9PXEL9Ci-vim2X0uNKWZBAqPCQZSg/edit#gid=1401671201
