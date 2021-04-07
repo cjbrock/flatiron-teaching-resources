@@ -22,3 +22,8 @@ If you've ended up here, you've been granted access by Corinna! Welcome :-) This
 
 
 ### React
+
+
+## Other good stuff:
+
+- Global gitignore repo: https://github.com/github/gitignore
