@@ -1,0 +1,14 @@
+<h1><%= @post.title%></h1>
+<p><%= @post.body%></p>
+
+
+# edit link
+#delete form
+
+<h2>Would you like to delete this quote?</h2>
+<form method="POST" action="/posts/<%= @post.id %>">
+  <input type="hidden" id="hidden" name="_method" value="DELETE">
+  <input type="submit" value="delete">
+</form>
+
+<a href="/posts">Back to the index</a>

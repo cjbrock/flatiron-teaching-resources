@@ -282,3 +282,20 @@ patch '/posts/:id' do
       redirect "posts/new"
   end
 end
+
+
+# I usually run over here, so I usually don't end up have time for delete here. BUT here it is: 
+
+delete '/posts/:id' do
+  @post = Post.find_by_id(params[:id])
+  @post.destroy
+  redirect "/posts"
+end
+
+# and usually I'll embed it on a show page:
+
+<h2>Would you like to delete this quote?</h2>
+<form method="POST" action="/posts/<%= @post.id %>">
+  <input type="hidden" id="hidden" name="_method" value="DELETE">
+  <input type="submit" value="delete">
+</form>
