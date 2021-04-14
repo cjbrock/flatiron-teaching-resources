@@ -1,0 +1,444 @@
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTours (20201013152603)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "tours" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "activities" varchar, "cost" float, "start_time" time, "end_time" time, "tour_date" date, "full" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201013152603"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-13 15:27:17.239057"], ["updated_at", "2020-10-13 15:27:17.239057"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/tours" for ::1 at 2020-10-13 11:28:14 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  [1m[36mTour Load (0.4ms)[0m  [1m[34mSELECT "tours".* FROM "tours"[0m
+  ↳ app/views/tours/index.html.erb:21
+  Rendered tours/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2038)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/corinnamoore/Development/cohort-lead/study-groups/study-group-10-13-20-intro-to-rails/tourist-app/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 1761ms
+Built at: 10/13/2020 11:28:18 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 4203ms (Views: 4189.2ms | ActiveRecord: 0.6ms | Allocations: 26896)
+
+
+Started GET "/tours/new" for ::1 at 2020-10-13 11:28:39 -0400
+Processing by ToursController#new as HTML
+  Rendering tours/new.html.erb within layouts/application
+  Rendered tours/_form.html.erb (Duration: 29.5ms | Allocations: 11393)
+  Rendered tours/new.html.erb within layouts/application (Duration: 31.2ms | Allocations: 11751)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 37.8ms | ActiveRecord: 0.8ms | Allocations: 23058)
+
+
+Started POST "/tours" for ::1 at 2020-10-13 11:29:28 -0400
+Processing by ToursController#create as HTML
+  Parameters: {"authenticity_token"=>"R6oLpAs7bIFWib3rYtCa2coTkxI4GOpvubSQqbtksOcnV/EUzeJV0bnpAdZvYf3ZddyqKaB7SjYl5CxtU74/2w==", "tour"=>{"name"=>"Bourbon Trail", "location"=>"Lexington, KY", "activities"=>"drink a lot", "cost"=>"$200", "start_time(1i)"=>"2020", "start_time(2i)"=>"10", "start_time(3i)"=>"13", "start_time(4i)"=>"09", "start_time(5i)"=>"00", "end_time(1i)"=>"2020", "end_time(2i)"=>"10", "end_time(3i)"=>"13", "end_time(4i)"=>"15", "end_time(5i)"=>"00", "tour_date(1i)"=>"2020", "tour_date(2i)"=>"10", "tour_date(3i)"=>"31", "full"=>"0"}, "commit"=>"Create Tour"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tours_controller.rb:30:in `block in create'
+  [1m[36mTour Create (1.6ms)[0m  [1m[32mINSERT INTO "tours" ("name", "location", "activities", "cost", "start_time", "end_time", "tour_date", "full", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bourbon Trail"], ["location", "Lexington, KY"], ["activities", "drink a lot"], ["cost", 0.0], ["start_time", "2000-01-01 09:00:00"], ["end_time", "2000-01-01 15:00:00"], ["tour_date", "2020-10-31"], ["full", 0], ["created_at", "2020-10-13 15:29:28.683984"], ["updated_at", "2020-10-13 15:29:28.683984"]]
+  ↳ app/controllers/tours_controller.rb:30:in `block in create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tours_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/tours/1
+Completed 302 Found in 11ms (ActiveRecord: 2.4ms | Allocations: 3814)
+
+
+Started GET "/tours/1" for ::1 at 2020-10-13 11:29:28 -0400
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTour Load (0.2ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tours_controller.rb:67:in `set_tour'
+  Rendering tours/show.html.erb within layouts/application
+  Rendered tours/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 469)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 16.1ms | ActiveRecord: 0.2ms | Allocations: 5581)
+
+
+Started GET "/tours" for ::1 at 2020-10-13 11:29:35 -0400
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  [1m[36mTour Load (0.3ms)[0m  [1m[34mSELECT "tours".* FROM "tours"[0m
+  ↳ app/views/tours/index.html.erb:21
+  Rendered tours/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 846)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.3ms | Allocations: 4812)
+
+
+Started GET "/tours/new" for ::1 at 2020-10-13 11:29:41 -0400
+Processing by ToursController#new as HTML
+  Rendering tours/new.html.erb within layouts/application
+  Rendered tours/_form.html.erb (Duration: 7.4ms | Allocations: 5617)
+  Rendered tours/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 5704)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 9688)
+
+
+Started GET "/tours" for ::1 at 2020-10-13 11:29:47 -0400
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  [1m[36mTour Load (0.2ms)[0m  [1m[34mSELECT "tours".* FROM "tours"[0m
+  ↳ app/views/tours/index.html.erb:21
+  Rendered tours/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 851)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 4835)
+
+
+Started GET "/tours/1/edit" for ::1 at 2020-10-13 11:30:01 -0400
+Processing by ToursController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTour Load (0.2ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tours_controller.rb:67:in `set_tour'
+  Rendering tours/edit.html.erb within layouts/application
+  Rendered tours/_form.html.erb (Duration: 8.4ms | Allocations: 5723)
+  Rendered tours/edit.html.erb within layouts/application (Duration: 10.6ms | Allocations: 5984)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.2ms | Allocations: 10655)
+
+
+Started PATCH "/tours/1" for ::1 at 2020-10-13 11:30:10 -0400
+Processing by ToursController#update as HTML
+  Parameters: {"authenticity_token"=>"CjQZobulmwktA3M25CYAlJY9OlMFqo8lIH1EL0beIiY3w+pAw0hNamWoW9xzi0z/34IEtG6bU+w+5Ay0VKqbuw==", "tour"=>{"name"=>"Bourbon Trail", "location"=>"Lexington, KY", "activities"=>"drink a lot", "cost"=>"200", "start_time(1i)"=>"2000", "start_time(2i)"=>"1", "start_time(3i)"=>"1", "start_time(4i)"=>"09", "start_time(5i)"=>"00", "end_time(1i)"=>"2000", "end_time(2i)"=>"1", "end_time(3i)"=>"1", "end_time(4i)"=>"15", "end_time(5i)"=>"00", "tour_date(1i)"=>"2020", "tour_date(2i)"=>"10", "tour_date(3i)"=>"31", "full"=>"0"}, "commit"=>"Update Tour", "id"=>"1"}
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tours_controller.rb:67:in `set_tour'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tours_controller.rb:44:in `block in update'
+  [1m[36mTour Update (1.4ms)[0m  [1m[33mUPDATE "tours" SET "cost" = ?, "updated_at" = ? WHERE "tours"."id" = ?[0m  [["cost", 200.0], ["updated_at", "2020-10-13 15:30:10.527450"], ["id", 1]]
+  ↳ app/controllers/tours_controller.rb:44:in `block in update'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tours_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/tours/1
+Completed 302 Found in 10ms (ActiveRecord: 2.2ms | Allocations: 4172)
+
+
+Started GET "/tours/1" for ::1 at 2020-10-13 11:30:10 -0400
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tours_controller.rb:67:in `set_tour'
+  Rendering tours/show.html.erb within layouts/application
+  Rendered tours/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 153)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.1ms | Allocations: 4680)
+
+
+Started GET "/tours" for ::1 at 2020-10-13 11:30:12 -0400
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  [1m[36mTour Load (0.2ms)[0m  [1m[34mSELECT "tours".* FROM "tours"[0m
+  ↳ app/views/tours/index.html.erb:21
+  Rendered tours/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 843)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms | Allocations: 4815)
+
+
+Started GET "/tours/1" for ::1 at 2020-10-13 11:30:35 -0400
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tours_controller.rb:67:in `set_tour'
+  Rendering tours/show.html.erb within layouts/application
+  Rendered tours/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 149)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.1ms | Allocations: 4662)
+
+
+Started GET "/tours/1/edit" for ::1 at 2020-10-13 11:30:39 -0400
+Processing by ToursController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTour Load (0.2ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tours_controller.rb:67:in `set_tour'
+  Rendering tours/edit.html.erb within layouts/application
+  Rendered tours/_form.html.erb (Duration: 4.4ms | Allocations: 5693)
+  Rendered tours/edit.html.erb within layouts/application (Duration: 4.8ms | Allocations: 5810)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.2ms | Allocations: 10323)
+
+
+Started DELETE "/tours/1" for ::1 at 2020-10-13 11:30:46 -0400
+Processing by ToursController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kUkszzEkKI5qUC+u839k/xShhesEW4l9+9d/oKazF/Zli55Cg4MlEExYuUXsdOuo6jhP0C/2YNpHByErN3+m3A==", "id"=>"1"}
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tours_controller.rb:67:in `set_tour'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tours_controller.rb:57:in `destroy'
+  [1m[36mTour Destroy (1.2ms)[0m  [1m[31mDELETE FROM "tours" WHERE "tours"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/tours_controller.rb:57:in `destroy'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tours_controller.rb:57:in `destroy'
+Redirected to http://localhost:3000/tours
+Completed 302 Found in 6ms (ActiveRecord: 2.4ms | Allocations: 2826)
+
+
+Started GET "/tours" for ::1 at 2020-10-13 11:30:46 -0400
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours"[0m
+  ↳ app/views/tours/index.html.erb:21
+  Rendered tours/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 644)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 4628)
+
+
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /Users/corinnamoore/.rvm/gems/ruby-2.6.1/bin/rake:23)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTourists (20201013154827)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "tourists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "hometown" varchar, "ticket_paid" boolean, "tour_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_0c9e4fd9fd"
+FOREIGN KEY ("tour_id")
+  REFERENCES "tours" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tourists_on_tour_id" ON "tourists" ("tour_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201013154827"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Create (0.6ms)[0m  [1m[32mINSERT INTO "tours" ("name", "location", "activities", "cost", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jacques Renault"], ["location", "West Jonathanside"], ["activities", "Bill Overdew"], ["cost", 218160.9127048431], ["created_at", "2020-10-13 16:01:27.598157"], ["updated_at", "2020-10-13 16:01:27.598157"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Create (0.3ms)[0m  [1m[32mINSERT INTO "tours" ("name", "location", "activities", "cost", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jerry Horne"], ["location", "Port Rozanne"], ["activities", "Sharon A. Burger"], ["cost", 615107.2046240714], ["created_at", "2020-10-13 16:01:27.602675"], ["updated_at", "2020-10-13 16:01:27.602675"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Create (0.3ms)[0m  [1m[32mINSERT INTO "tours" ("name", "location", "activities", "cost", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Gersten Hayward"], ["location", "South Damion"], ["activities", "Ted E. Baer"], ["cost", 565387.0576416663], ["created_at", "2020-10-13 16:01:27.605995"], ["updated_at", "2020-10-13 16:01:27.605995"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Create (0.4ms)[0m  [1m[32mINSERT INTO "tours" ("name", "location", "activities", "cost", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jerry Horne"], ["location", "West Terry"], ["activities", "Sam Pull"], ["cost", 808904.9323538817], ["created_at", "2020-10-13 16:01:27.609963"], ["updated_at", "2020-10-13 16:01:27.609963"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Create (0.3ms)[0m  [1m[32mINSERT INTO "tours" ("name", "location", "activities", "cost", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Windom Earle"], ["location", "New Stacia"], ["activities", "Liv Long"], ["cost", 541948.8328386557], ["created_at", "2020-10-13 16:01:27.614078"], ["updated_at", "2020-10-13 16:01:27.614078"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.2ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.9ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Gabriel Hirthe DDS"], ["hometown", "Lake Marishaburgh"], ["ticket_paid", 1], ["tour_id", 4], ["created_at", "2020-10-13 16:01:27.646112"], ["updated_at", "2020-10-13 16:01:27.646112"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.4ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ewa Will"], ["hometown", "North German"], ["ticket_paid", 0], ["tour_id", 3], ["created_at", "2020-10-13 16:01:27.652878"], ["updated_at", "2020-10-13 16:01:27.652878"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Lenore Lakin Esq."], ["hometown", "North Seanchester"], ["ticket_paid", 0], ["tour_id", 6], ["created_at", "2020-10-13 16:01:27.658001"], ["updated_at", "2020-10-13 16:01:27.658001"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Junita Hermann"], ["hometown", "West Eliciatown"], ["ticket_paid", 1], ["tour_id", 4], ["created_at", "2020-10-13 16:01:27.662528"], ["updated_at", "2020-10-13 16:01:27.662528"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Kacey Haag"], ["hometown", "Port Ahmad"], ["ticket_paid", 1], ["tour_id", 2], ["created_at", "2020-10-13 16:01:27.666724"], ["updated_at", "2020-10-13 16:01:27.666724"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.6ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Janice Toy"], ["hometown", "Flatleytown"], ["ticket_paid", 0], ["tour_id", 4], ["created_at", "2020-10-13 16:01:27.671579"], ["updated_at", "2020-10-13 16:01:27.671579"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Michal Leannon"], ["hometown", "West Randyberg"], ["ticket_paid", 0], ["tour_id", 6], ["created_at", "2020-10-13 16:01:27.677108"], ["updated_at", "2020-10-13 16:01:27.677108"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Hue Fahey"], ["hometown", "Dickensberg"], ["ticket_paid", 0], ["tour_id", 3], ["created_at", "2020-10-13 16:01:27.681962"], ["updated_at", "2020-10-13 16:01:27.681962"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Guadalupe Fay Esq."], ["hometown", "Port Gastonchester"], ["ticket_paid", 0], ["tour_id", 3], ["created_at", "2020-10-13 16:01:27.687055"], ["updated_at", "2020-10-13 16:01:27.687055"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.4ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Boris O'Keefe LLD"], ["hometown", "Shondamouth"], ["ticket_paid", 1], ["tour_id", 5], ["created_at", "2020-10-13 16:01:27.692653"], ["updated_at", "2020-10-13 16:01:27.692653"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Steven Torp"], ["hometown", "Port Donnettabury"], ["ticket_paid", 0], ["tour_id", 3], ["created_at", "2020-10-13 16:01:27.697193"], ["updated_at", "2020-10-13 16:01:27.697193"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Lou Luettgen"], ["hometown", "Ericton"], ["ticket_paid", 1], ["tour_id", 4], ["created_at", "2020-10-13 16:01:27.701875"], ["updated_at", "2020-10-13 16:01:27.701875"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jamar McGlynn"], ["hometown", "Elvaville"], ["ticket_paid", 1], ["tour_id", 4], ["created_at", "2020-10-13 16:01:27.706174"], ["updated_at", "2020-10-13 16:01:27.706174"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jeanett Lemke"], ["hometown", "Williamsonhaven"], ["ticket_paid", 1], ["tour_id", 5], ["created_at", "2020-10-13 16:01:27.710608"], ["updated_at", "2020-10-13 16:01:27.710608"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ladawn Prosacco"], ["hometown", "East Willette"], ["ticket_paid", 1], ["tour_id", 4], ["created_at", "2020-10-13 16:01:27.716685"], ["updated_at", "2020-10-13 16:01:27.716685"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.2ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.4ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Dr. Ruben Herman"], ["hometown", "Eduardoton"], ["ticket_paid", 1], ["tour_id", 5], ["created_at", "2020-10-13 16:01:27.721975"], ["updated_at", "2020-10-13 16:01:27.721975"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Clifton Wisozk CPA"], ["hometown", "McGlynnfort"], ["ticket_paid", 1], ["tour_id", 6], ["created_at", "2020-10-13 16:01:27.726903"], ["updated_at", "2020-10-13 16:01:27.726903"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jamal Runolfsdottir"], ["hometown", "Pacochahaven"], ["ticket_paid", 0], ["tour_id", 6], ["created_at", "2020-10-13 16:01:27.732584"], ["updated_at", "2020-10-13 16:01:27.732584"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Kittie Willms"], ["hometown", "Arleneton"], ["ticket_paid", 1], ["tour_id", 3], ["created_at", "2020-10-13 16:01:27.737346"], ["updated_at", "2020-10-13 16:01:27.737346"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Arthur Hand"], ["hometown", "Johnsonhaven"], ["ticket_paid", 1], ["tour_id", 4], ["created_at", "2020-10-13 16:01:27.742486"], ["updated_at", "2020-10-13 16:01:27.742486"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Genevive Baumbach"], ["hometown", "Beckerhaven"], ["ticket_paid", 1], ["tour_id", 5], ["created_at", "2020-10-13 16:01:27.747695"], ["updated_at", "2020-10-13 16:01:27.747695"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Loris Brown"], ["hometown", "Kerlukeport"], ["ticket_paid", 1], ["tour_id", 4], ["created_at", "2020-10-13 16:01:27.752341"], ["updated_at", "2020-10-13 16:01:27.752341"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.2ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.5ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jacquelin Durgan"], ["hometown", "East Joesph"], ["ticket_paid", 1], ["tour_id", 6], ["created_at", "2020-10-13 16:01:27.779179"], ["updated_at", "2020-10-13 16:01:27.779179"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Fritz Strosin CPA"], ["hometown", "North Trey"], ["ticket_paid", 1], ["tour_id", 2], ["created_at", "2020-10-13 16:01:27.784602"], ["updated_at", "2020-10-13 16:01:27.784602"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTourist Create (0.3ms)[0m  [1m[32mINSERT INTO "tourists" ("name", "hometown", "ticket_paid", "tour_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tomas Bartoletti Ret."], ["hometown", "Jakubowskichester"], ["ticket_paid", 1], ["tour_id", 4], ["created_at", "2020-10-13 16:01:27.789906"], ["updated_at", "2020-10-13 16:01:27.789906"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTour Load (0.2ms)[0m  [1m[34mSELECT "tours".* FROM "tours" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTourist Load (0.2ms)[0m  [1m[34mSELECT "tourists".* FROM "tourists" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTour Load (0.4ms)[0m  [1m[34mSELECT "tours".* FROM "tours" ORDER BY "tours"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTourist Load (0.2ms)[0m  [1m[34mSELECT "tourists".* FROM "tourists" WHERE "tourists"."tour_id" = ? LIMIT ?[0m  [["tour_id", 2], ["LIMIT", 11]]
+Started GET "/tours" for ::1 at 2020-10-13 12:02:20 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ToursController#index as HTML
+  Rendering tours/index.html.erb within layouts/application
+  [1m[36mTour Load (0.2ms)[0m  [1m[34mSELECT "tours".* FROM "tours"[0m
+  ↳ app/views/tours/index.html.erb:21
+  Rendered tours/index.html.erb within layouts/application (Duration: 38.2ms | Allocations: 10263)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 106ms (Views: 95.3ms | ActiveRecord: 0.9ms | Allocations: 32820)
+
+
+Started GET "/tours/2" for ::1 at 2020-10-13 12:02:32 -0400
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTour Load (0.3ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tours_controller.rb:56:in `set_tour'
+  Rendering tours/show.html.erb within layouts/application
+  Rendered tours/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 409)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 0.3ms | Allocations: 5599)
+
+
+Started GET "/tours/2" for ::1 at 2020-10-13 12:04:05 -0400
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTour Load (0.2ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tours_controller.rb:56:in `set_tour'
+  Rendering tours/show.html.erb within layouts/application
+  [1m[36mTourist Load (0.2ms)[0m  [1m[34mSELECT "tourists".* FROM "tourists" WHERE "tourists"."tour_id" = ?[0m  [["tour_id", 2]]
+  ↳ app/views/tours/show.html.erb:45
+  Rendered tours/show.html.erb within layouts/application (Duration: 36.4ms | Allocations: 11680)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 50.0ms | ActiveRecord: 1.2ms | Allocations: 17115)
+
+
+Started GET "/tours/3" for ::1 at 2020-10-13 12:04:15 -0400
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTour Load (0.3ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tours_controller.rb:56:in `set_tour'
+  Rendering tours/show.html.erb within layouts/application
+  [1m[36mTourist Load (0.2ms)[0m  [1m[34mSELECT "tourists".* FROM "tourists" WHERE "tourists"."tour_id" = ?[0m  [["tour_id", 3]]
+  ↳ app/views/tours/show.html.erb:45
+  Rendered tours/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 927)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.5ms | Allocations: 5528)
+
+
+Started GET "/tours/4" for ::1 at 2020-10-13 12:04:20 -0400
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTour Load (0.3ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tours_controller.rb:56:in `set_tour'
+  Rendering tours/show.html.erb within layouts/application
+  [1m[36mTourist Load (0.2ms)[0m  [1m[34mSELECT "tourists".* FROM "tourists" WHERE "tourists"."tour_id" = ?[0m  [["tour_id", 4]]
+  ↳ app/views/tours/show.html.erb:45
+  Rendered tours/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1000)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.5ms | Allocations: 5602)
+
+
+Started GET "/tours/5" for ::1 at 2020-10-13 12:04:30 -0400
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTour Load (0.2ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tours_controller.rb:56:in `set_tour'
+  Rendering tours/show.html.erb within layouts/application
+  [1m[36mTourist Load (0.2ms)[0m  [1m[34mSELECT "tourists".* FROM "tourists" WHERE "tourists"."tour_id" = ?[0m  [["tour_id", 5]]
+  ↳ app/views/tours/show.html.erb:45
+  Rendered tours/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 898)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.3ms | Allocations: 5486)
+
+
+Started GET "/tours/6" for ::1 at 2020-10-13 12:04:33 -0400
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTour Load (0.2ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tours_controller.rb:56:in `set_tour'
+  Rendering tours/show.html.erb within layouts/application
+  [1m[36mTourist Load (0.1ms)[0m  [1m[34mSELECT "tourists".* FROM "tourists" WHERE "tourists"."tour_id" = ?[0m  [["tour_id", 6]]
+  ↳ app/views/tours/show.html.erb:45
+  Rendered tours/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 918)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 5501)
+
+
+Started GET "/tours/5" for ::1 at 2020-10-13 12:04:43 -0400
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTour Load (0.1ms)[0m  [1m[34mSELECT "tours".* FROM "tours" WHERE "tours"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tours_controller.rb:56:in `set_tour'
+  Rendering tours/show.html.erb within layouts/application
+  [1m[36mTourist Load (0.1ms)[0m  [1m[34mSELECT "tourists".* FROM "tourists" WHERE "tourists"."tour_id" = ?[0m  [["tour_id", 5]]
+  ↳ app/views/tours/show.html.erb:45
+  Rendered tours/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 898)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 5479)
+
+

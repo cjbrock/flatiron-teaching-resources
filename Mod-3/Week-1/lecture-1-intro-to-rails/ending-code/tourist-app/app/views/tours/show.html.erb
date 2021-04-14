@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tour.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @tour.location %>
+</p>
+
+<p>
+  <strong>Activities:</strong>
+  <%= @tour.activities %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @tour.cost %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @tour.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @tour.end_time %>
+</p>
+
+<p>
+  <strong>Tour date:</strong>
+  <%= @tour.tour_date %>
+</p>
+
+<p>
+  <strong>Full:</strong>
+  <%= @tour.full %>
+</p>
+
+<p>
+  <strong>Tourists:</strong>
+  <% @tour.tourists.each do |tourist| %>
+    <p><%= tourist.name %></p>
+  <% end %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_tour_path(@tour) %> |
+<%= link_to 'Back', tours_path %>
