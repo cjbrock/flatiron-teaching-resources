@@ -106,14 +106,16 @@ rerun.txt
 pickle-email-*.html
 
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
+Mod-3/Week-1/lecture-3-rails-crud/starting-code/study-group-sushi/tmp/*
+Mod-3/Week-1/lecture-3-rails-crud/starting-code/study-group-sushi/log/*
+Mod-3/Week-1/lecture-3-rails-crud/ending-code/study-group-sushi/log/*
+Mod-3/Week-1/lecture-3-rails-crud/ending-code/study-group-sushi/tmp/*
 !/log/.keep
 !/tmp/.keep
 
 # TODO Comment out this rule if you are OK with secrets being uploaded to the repo
-/Mod-3/Week-1/lecture-3-rails-crud/ending-code/config/initializers/secret_token.rb
-/Mod-3/Week-1/lecture-3-rails-crud/ending-code/config/master.key
+Mod-3/Week-1/lecture-3-rails-crud/ending-code/study-group-sushi/config/initializers/secret_token.rb
+Mod-3/Week-1/lecture-3-rails-crud/ending-code/study-group-sushi/config/master.key
 
 # Only include if you have production secrets in this file, which is no longer a Rails default
 # config/secrets.yml
