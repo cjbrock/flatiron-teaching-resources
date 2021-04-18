@@ -1,0 +1,22 @@
+<h1>Browse our Mountains of Sushi:</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <ul>
+                <% @sushis.each do | sushi | %>
+                    <li><%= link_to sushi.name, "/sushis/#{sushi.id}" %></li>
+                    <li><%= link_to sushi.name, sushi_path(sushi) %></li>
+                    <li><%= link_to sushi.name, sushi %></li>
+                <% end %>
+            </ul>
+            <p><%= link_to "Create a new sushi", new_sushis_path %></p>
+
+            <p><%= link_to "Google", "http://google.com" %></p>
+        </div>
+        <div class="col-xs-6">
+            <div class="background-div">
+                <img class="img-responsive fixed-image img-circle" src="https://cdn.dribbble.com/users/644992/screenshots/1772842/twin_peaks.jpg"/>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1467 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSushis (20180115025443)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "sushis" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180115025443"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-06 12:40:38.742261"], ["updated_at", "2020-05-06 12:40:38.742261"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2020-05-06 08:40:57 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SushisController#home as HTML
+  Rendering sushis/home.html within layouts/application
+  Rendered sushis/home.html within layouts/application (1.3ms)
+Completed 200 OK in 265ms (Views: 260.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Lil the dancer Roe Burrito"], ["created_at", "2020-05-06 12:41:15.984767"], ["updated_at", "2020-05-06 12:41:15.984767"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Log Lady's Cabin Raw Invention"], ["created_at", "2020-05-06 12:41:15.988135"], ["updated_at", "2020-05-06 12:41:15.988135"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sheriff's Department Raw Delight"], ["created_at", "2020-05-06 12:41:15.990345"], ["updated_at", "2020-05-06 12:41:15.990345"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Mrs Tremond Tempura Burrito"], ["created_at", "2020-05-06 12:41:15.992297"], ["updated_at", "2020-05-06 12:41:15.992297"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "The Man from Another Place Seaweed Invention"], ["created_at", "2020-05-06 12:41:15.994582"], ["updated_at", "2020-05-06 12:41:15.994582"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Twin Peaks Savings & Loan Tempura Roll"], ["created_at", "2020-05-06 12:41:15.997650"], ["updated_at", "2020-05-06 12:41:15.997650"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Major Briggs Tempura Burrito"], ["created_at", "2020-05-06 12:41:16.000575"], ["updated_at", "2020-05-06 12:41:16.000575"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Fat Trout Trailer Park Raw Cone"], ["created_at", "2020-05-06 12:41:16.003530"], ["updated_at", "2020-05-06 12:41:16.003530"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Evelyn Marsh Roe Roll"], ["created_at", "2020-05-06 12:41:16.006022"], ["updated_at", "2020-05-06 12:41:16.006022"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Horne's Department Store Seaweed Burrito"], ["created_at", "2020-05-06 12:41:16.008254"], ["updated_at", "2020-05-06 12:41:16.008254"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ronette's Bridge Raw Invention"], ["created_at", "2020-05-06 12:41:16.011131"], ["updated_at", "2020-05-06 12:41:16.011131"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Great Northern Hotel Seaweed Invention"], ["created_at", "2020-05-06 12:41:16.013785"], ["updated_at", "2020-05-06 12:41:16.013785"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Double-R Diner Seaweed Roll"], ["created_at", "2020-05-06 12:41:16.016017"], ["updated_at", "2020-05-06 12:41:16.016017"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Blackie O'Reilly Seaweed Delight"], ["created_at", "2020-05-06 12:41:16.018077"], ["updated_at", "2020-05-06 12:41:16.018077"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Dougie Milford Tempura Delight"], ["created_at", "2020-05-06 12:41:16.020307"], ["updated_at", "2020-05-06 12:41:16.020307"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Big Ed's Gas Farm Raw Delight"], ["created_at", "2020-05-06 12:41:16.022768"], ["updated_at", "2020-05-06 12:41:16.022768"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sarah Palmer Roe Burrito"], ["created_at", "2020-05-06 12:41:16.024697"], ["updated_at", "2020-05-06 12:41:16.024697"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Dead Dog Farm Raw Cone"], ["created_at", "2020-05-06 12:41:16.026608"], ["updated_at", "2020-05-06 12:41:16.026608"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Blue Pine Lodge Seaweed Cone"], ["created_at", "2020-05-06 12:41:16.028796"], ["updated_at", "2020-05-06 12:41:16.028796"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Cemetery Tempura Cone"], ["created_at", "2020-05-06 12:41:16.031128"], ["updated_at", "2020-05-06 12:41:16.031128"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Town Hall Tempura Invention"], ["created_at", "2020-05-06 12:41:16.033137"], ["updated_at", "2020-05-06 12:41:16.033137"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bookhouse Tempura Cone"], ["created_at", "2020-05-06 12:41:16.035136"], ["updated_at", "2020-05-06 12:41:16.035136"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bobby Briggs Raw Roll"], ["created_at", "2020-05-06 12:41:16.037429"], ["updated_at", "2020-05-06 12:41:16.037429"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "The Giant Raw Invention"], ["created_at", "2020-05-06 12:41:16.039570"], ["updated_at", "2020-05-06 12:41:16.039570"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Catherine Martell Tempura Invention"], ["created_at", "2020-05-06 12:41:16.041701"], ["updated_at", "2020-05-06 12:41:16.041701"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "One Eyed Jack's Seaweed Delight"], ["created_at", "2020-05-06 12:41:16.043925"], ["updated_at", "2020-05-06 12:41:16.043925"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Easter Park Seaweed Invention"], ["created_at", "2020-05-06 12:41:16.046643"], ["updated_at", "2020-05-06 12:41:16.046643"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Mike Nelson Raw Cone"], ["created_at", "2020-05-06 12:41:16.049152"], ["updated_at", "2020-05-06 12:41:16.049152"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "FBI Office Seaweed Delight"], ["created_at", "2020-05-06 12:41:16.051216"], ["updated_at", "2020-05-06 12:41:16.051216"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Annie Blackburn Roe Invention"], ["created_at", "2020-05-06 12:41:16.054121"], ["updated_at", "2020-05-06 12:41:16.054121"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Calhoun Memorial Hospital Roe Roll"], ["created_at", "2020-05-06 12:41:16.056291"], ["updated_at", "2020-05-06 12:41:16.056291"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Glastonbury Grove Raw Roll"], ["created_at", "2020-05-06 12:41:16.058197"], ["updated_at", "2020-05-06 12:41:16.058197"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Timber Falls Motel Raw Invention"], ["created_at", "2020-05-06 12:41:16.060159"], ["updated_at", "2020-05-06 12:41:16.060159"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Wind River Tempura Cone"], ["created_at", "2020-05-06 12:41:16.062566"], ["updated_at", "2020-05-06 12:41:16.062566"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Windom Earle Raw Cone"], ["created_at", "2020-05-06 12:41:16.064964"], ["updated_at", "2020-05-06 12:41:16.064964"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Leo Johnson Seaweed Delight"], ["created_at", "2020-05-06 12:41:16.066912"], ["updated_at", "2020-05-06 12:41:16.066912"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "White Lodge Tempura Delight"], ["created_at", "2020-05-06 12:41:16.068898"], ["updated_at", "2020-05-06 12:41:16.068898"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Shelly Johnson Roe Invention"], ["created_at", "2020-05-06 12:41:16.070995"], ["updated_at", "2020-05-06 12:41:16.070995"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Palmer House Tempura Roll"], ["created_at", "2020-05-06 12:41:16.073120"], ["updated_at", "2020-05-06 12:41:16.073120"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bernard Renault Seaweed Invention"], ["created_at", "2020-05-06 12:41:16.075340"], ["updated_at", "2020-05-06 12:41:16.075340"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Lucy Moran Seaweed Roll"], ["created_at", "2020-05-06 12:41:16.077905"], ["updated_at", "2020-05-06 12:41:16.077905"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Jacques Renault Raw Invention"], ["created_at", "2020-05-06 12:41:16.090497"], ["updated_at", "2020-05-06 12:41:16.090497"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Black Lake Roe Delight"], ["created_at", "2020-05-06 12:41:16.093112"], ["updated_at", "2020-05-06 12:41:16.093112"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "High School Tempura Delight"], ["created_at", "2020-05-06 12:41:16.096259"], ["updated_at", "2020-05-06 12:41:16.096259"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Owl Cave Roe Delight"], ["created_at", "2020-05-06 12:41:16.099092"], ["updated_at", "2020-05-06 12:41:16.099092"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Roadhouse Tempura Invention"], ["created_at", "2020-05-06 12:41:16.102204"], ["updated_at", "2020-05-06 12:41:16.102204"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Haps Diner Seaweed Burrito"], ["created_at", "2020-05-06 12:41:16.105085"], ["updated_at", "2020-05-06 12:41:16.105085"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sheriff Truman Tempura Roll"], ["created_at", "2020-05-06 12:41:16.107795"], ["updated_at", "2020-05-06 12:41:16.107795"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Gersten Hayward Seaweed Delight"], ["created_at", "2020-05-06 12:41:16.110836"], ["updated_at", "2020-05-06 12:41:16.110836"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Leland Palmer Seaweed Roll"], ["created_at", "2020-05-06 12:41:16.114170"], ["updated_at", "2020-05-06 12:41:16.114170"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-05-06 08:41:30 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SushisController#home as HTML
+  Rendering sushis/home.html within layouts/application
+  Rendered sushis/home.html within layouts/application (0.9ms)
+Completed 200 OK in 224ms (Views: 218.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-06 08:41:34 -0400
+Processing by SushisController#home as HTML
+  Rendering sushis/home.html within layouts/application
+  Rendered sushis/home.html within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-06 08:41:37 -0400
+Processing by SushisController#home as HTML
+  Rendering sushis/home.html within layouts/application
+  Rendered sushis/home.html within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-06 08:41:40 -0400
+Processing by SushisController#home as HTML
+  Rendering sushis/home.html within layouts/application
+  Rendered sushis/home.html within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 08:50:22 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SushisController#index as HTML
+Completed 500 Internal Server Error in 53553ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `index'
+app/controllers/sushis_controller.rb:5:in `index'
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 08:51:30 -0400
+Processing by SushisController#index as HTML
+  [1m[36mSushi Load (0.7ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 08:52:43 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SushisController#index as HTML
+Completed 500 Internal Server Error in 10424ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `index'
+app/controllers/sushis_controller.rb:6:in `index'
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 08:53:04 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  Rendered sushis/index.erb within layouts/application (1.4ms)
+Completed 200 OK in 2644ms (Views: 2610.2ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2020-05-06 08:54:43 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [3 times] (30.5ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (32.8ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (98.1ms)
+Completed 200 OK in 150ms (Views: 118.9ms)
+
+
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 09:00:04 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (4.5ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (225.1ms)
+Completed 200 OK in 545ms (Views: 528.8ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/sushis/1" for 127.0.0.1 at 2020-05-06 09:16:04 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering sushis/show.erb within layouts/application
+  Rendered sushis/show.erb within layouts/application (9.7ms)
+Completed 200 OK in 364ms (Views: 338.9ms)
+
+
+Started GET "/sushis/5" for 127.0.0.1 at 2020-05-06 09:17:24 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 422997ms
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/sushis_controller.rb:9:in `show'
+Started GET "/sushis/5" for 127.0.0.1 at 2020-05-06 09:24:35 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSushi Load (1.6ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering sushis/show.erb within layouts/application
+  Rendered sushis/show.erb within layouts/application (1.4ms)
+Completed 200 OK in 433ms (Views: 277.8ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/sushis/100000" for 127.0.0.1 at 2020-05-06 09:24:45 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"100000"}
+  [1m[36mSushi Load (2.1ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 100000], ["LIMIT", 1]]
+Redirected to http://localhost:3000/sushis
+Completed 302 Found in 35ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 09:24:45 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (7.3ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (99.2ms)
+Completed 200 OK in 395ms (Views: 369.8ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 09:28:12 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (3.9ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (2009.6ms)
+Completed 500 Internal Server Error in 2050ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `sushi_path' for #<#<Class:0x00007ff2d0ce1ee8>:0x00007ff2d11ff6f0>
+Did you mean?  sushis_path):
+    4:         <div class="col-xs-6">
+    5:             <ul>
+    6:                 <% @sushis.each do |s| %>
+    7:                     <li><%= link_to(s.name, s)%></li>
+    8:                 <% end %>
+    9:             </ul>
+   10:         </div>
+  
+app/views/sushis/index.erb:7:in `block in _app_views_sushis_index_erb___4000361658557193508_70340470860020'
+app/views/sushis/index.erb:6:in `_app_views_sushis_index_erb___4000361658557193508_70340470860020'
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 09:28:33 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (2.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (1975.0ms)
+Completed 500 Internal Server Error in 2008ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `sushi' for #<#<Class:0x00007ff2d0ce1ee8>:0x00007ff2d0e943a8>
+Did you mean?  @sushis):
+    4:         <div class="col-xs-6">
+    5:             <ul>
+    6:                 <% @sushis.each do |s| %>
+    7:                     <li><%= link_to(sushi.name, sushi)%></li>
+    8:                 <% end %>
+    9:             </ul>
+   10:         </div>
+  
+app/views/sushis/index.erb:7:in `block in _app_views_sushis_index_erb___4000361658557193508_70340431283200'
+app/views/sushis/index.erb:6:in `_app_views_sushis_index_erb___4000361658557193508_70340431283200'
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 09:29:18 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (7.8ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (2224.4ms)
+Completed 500 Internal Server Error in 2258ms (ActiveRecord: 7.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `sushi' for #<#<Class:0x00007ff2d0ce1ee8>:0x00007ff2d50f6a20>
+Did you mean?  @sushis):
+    4:         <div class="col-xs-6">
+    5:             <ul>
+    6:                 <% @sushis.each do |s| %>
+    7:                     <li><%= link_to(sushi.name, sushi)%></li>
+    8:                 <% end %>
+    9:             </ul>
+   10:         </div>
+  
+app/views/sushis/index.erb:7:in `block in _app_views_sushis_index_erb___4000361658557193508_70340431888120'
+app/views/sushis/index.erb:6:in `_app_views_sushis_index_erb___4000361658557193508_70340431888120'
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 09:29:32 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (11.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (1907.3ms)
+Completed 500 Internal Server Error in 1949ms (ActiveRecord: 11.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `sushi_path' for #<#<Class:0x00007ff2d0ce1ee8>:0x00007ff2d32271a8>
+Did you mean?  sushis_path):
+    4:         <div class="col-xs-6">
+    5:             <ul>
+    6:                 <% @sushis.each do |s| %>
+    7:                     <li><%= link_to(s.name, s)%></li>
+    8:                 <% end %>
+    9:             </ul>
+   10:         </div>
+  
+app/views/sushis/index.erb:7:in `block in _app_views_sushis_index_erb___4000361658557193508_70340432378200'
+app/views/sushis/index.erb:6:in `_app_views_sushis_index_erb___4000361658557193508_70340432378200'
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 09:29:55 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (3.4ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (1590.9ms)
+Completed 500 Internal Server Error in 1629ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `s_path' for #<#<Class:0x00007ff2d0ce1ee8>:0x00007ff2d1118de0>):
+    4:         <div class="col-xs-6">
+    5:             <ul>
+    6:                 <% @sushis.each do |s| %>
+    7:                     <li><%= link_to(s.name, s_path(s))%></li>
+    8:                 <% end %>
+    9:             </ul>
+   10:         </div>
+  
+app/views/sushis/index.erb:7:in `block in _app_views_sushis_index_erb___4000361658557193508_70340432589780'
+app/views/sushis/index.erb:6:in `_app_views_sushis_index_erb___4000361658557193508_70340432589780'
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 09:31:54 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (8.7ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (1590.1ms)
+Completed 500 Internal Server Error in 1715ms (ActiveRecord: 8.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `s_path' for #<#<Class:0x00007ff2d0ce1ee8>:0x00007ff2cfe8c9d8>):
+    4:         <div class="col-xs-6">
+    5:             <ul>
+    6:                 <% @sushis.each do |s| %>
+    7:                     <li><%= link_to s.name, s_path(s) %></li>
+    8:                 <% end %>
+    9:             </ul>
+   10:         </div>
+  
+app/views/sushis/index.erb:7:in `block in _app_views_sushis_index_erb___4000361658557193508_70340425583060'
+app/views/sushis/index.erb:6:in `_app_views_sushis_index_erb___4000361658557193508_70340425583060'
+Started GET "/rails/info/routes" for 127.0.0.1 at 2020-05-06 09:32:23 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [4 times] (25.1ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.1ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (65.4ms)
+Completed 200 OK in 107ms (Views: 79.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 09:33:48 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (2.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (245.9ms)
+Completed 200 OK in 506ms (Views: 474.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/sushis.4" for 127.0.0.1 at 2020-05-06 09:34:11 -0400
+Processing by SushisController#index as 
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (2.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (228.0ms)
+Completed 200 OK in 481ms (Views: 461.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/sushis.4" for 127.0.0.1 at 2020-05-06 09:35:15 -0400
+Processing by SushisController#index as 
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (11.6ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (74.4ms)
+Completed 200 OK in 347ms (Views: 311.5ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/sushis/4" for 127.0.0.1 at 2020-05-06 09:37:10 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSushi Load (1.0ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering sushis/show.erb within layouts/application
+  Rendered sushis/show.erb within layouts/application (2.6ms)
+Completed 200 OK in 348ms (Views: 305.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/sushis.4" for 127.0.0.1 at 2020-05-06 09:39:54 -0400
+Processing by SushisController#index as 
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (4.4ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (1524.1ms)
+Completed 500 Internal Server Error in 1592ms (ActiveRecord: 28.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `s_path' for #<#<Class:0x00007ff2d52cfb08>:0x00007ff2d15251b8>):
+    4:         <div class="col-xs-6">
+    5:             <ul>
+    6:                 <% @sushis.each do |s| %>
+    7:                     <li><%= link_to s.name, s_path(s) %></li>
+    8:                 <% end %>
+    9:             </ul>
+   10:         </div>
+  
+app/views/sushis/index.erb:7:in `block in _app_views_sushis_index_erb___4000361658557193508_70340471499060'
+app/views/sushis/index.erb:6:in `_app_views_sushis_index_erb___4000361658557193508_70340471499060'
+Started GET "/sushis.4" for 127.0.0.1 at 2020-05-06 09:40:21 -0400
+Processing by SushisController#index as 
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (2.3ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (2029.0ms)
+Completed 500 Internal Server Error in 2076ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `s_path' for #<#<Class:0x00007ff2d52cfb08>:0x00007ff2d595c368>):
+    4:         <div class="col-xs-6">
+    5:             <ul>
+    6:                 <% @sushis.each do |s| %>
+    7:                     <li><%= link_to s.name, s_path %></li>
+    8:                 <% end %>
+    9:             </ul>
+   10:         </div>
+  
+app/views/sushis/index.erb:7:in `block in _app_views_sushis_index_erb___4000361658557193508_70340452900900'
+app/views/sushis/index.erb:6:in `_app_views_sushis_index_erb___4000361658557193508_70340452900900'
+Started GET "/sushis.4" for 127.0.0.1 at 2020-05-06 09:40:36 -0400
+Processing by SushisController#index as 
+  Rendering sushis/index.erb within layouts/application
+  Rendered sushis/index.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/corinnamoore/Development/cohort_lead/study-groups/study-group-050620-restful-routes-models/online-web-ft-120919-rails-restful-routing/app/views/sushis/index.erb:7: syntax error, unexpected ')', expecting '='
+...pend=( link_to (s.name, s_path) );@output_buffer.safe_append...
+...                              ^
+/Users/corinnamoore/Development/cohort_lead/study-groups/study-group-050620-restful-routes-models/online-web-ft-120919-rails-restful-routing/app/views/sushis/index.erb:8: syntax error, unexpected end, expecting ')'
+'.freeze;                 end 
+                          ^~~
+/Users/corinnamoore/Development/cohort_lead/study-groups/study-group-050620-restful-routes-models/online-web-ft-120919-rails-restful-routing/app/views/sushis/index.erb:20: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/corinnamoore/Development/cohort_lead/study-groups/study-group-050620-restful-routes-models/online-web-ft-120919-rails-restful-routing/app/views/sushis/index.erb:22: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/sushis/index.erb:7: syntax error, unexpected ')', expecting '='
+app/views/sushis/index.erb:8: syntax error, unexpected end, expecting ')'
+app/views/sushis/index.erb:20: syntax error, unexpected ensure, expecting ')'
+app/views/sushis/index.erb:22: syntax error, unexpected end, expecting ')'
+Started GET "/sushis.4" for 127.0.0.1 at 2020-05-06 09:40:48 -0400
+Processing by SushisController#index as 
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (2.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (2002.9ms)
+Completed 500 Internal Server Error in 2040ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `s_path' for #<#<Class:0x00007ff2d52cfb08>:0x00007ff2d51cfaf0>):
+    4:         <div class="col-xs-6">
+    5:             <ul>
+    6:                 <% @sushis.each do |s| %>
+    7:                     <li><%= link_to(s.name, s_path) %></li>
+    8:                 <% end %>
+    9:             </ul>
+   10:         </div>
+  
+app/views/sushis/index.erb:7:in `block in _app_views_sushis_index_erb___4000361658557193508_70340432346240'
+app/views/sushis/index.erb:6:in `_app_views_sushis_index_erb___4000361658557193508_70340432346240'
+Started GET "/sushis.4" for 127.0.0.1 at 2020-05-06 09:41:34 -0400
+Processing by SushisController#index as 
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (10.4ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (186.3ms)
+Completed 200 OK in 456ms (Views: 433.1ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/sushis/1" for 127.0.0.1 at 2020-05-06 09:41:41 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSushi Load (1.6ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering sushis/show.erb within layouts/application
+  Rendered sushis/show.erb within layouts/application (1.7ms)
+Completed 200 OK in 464ms (Views: 413.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 10:19:59 -0400
+Processing by SushisController#new as HTML
+  Parameters: {"new"=>"new"}
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (15.2ms)
+Completed 200 OK in 370ms (Views: 260.5ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 10:21:47 -0400
+Processing by SushisController#new as HTML
+  Parameters: {"new"=>"new"}
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (16.5ms)
+Completed 200 OK in 280ms (Views: 262.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sushis" for 127.0.0.1 at 2020-05-06 10:24:51 -0400
+Processing by SushisController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JqWN/axgVOzCBS9q2FnDoKri1TL72UlcqtgBnfuGfA5oQnViq/nlO8KPzJ6VK4qidsP+ou6Pi1JE+nK6T2+aMQ==", "name"=>"a new roll", "commit"=>"Create Sushi"}
+Completed 500 Internal Server Error in 64528ms
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sushis_controller.rb:20:in `create'
+Started GET "/rails/info/routes" for 127.0.0.1 at 2020-05-06 10:26:08 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (42.5ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.0ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (81.1ms)
+Completed 200 OK in 136ms (Views: 107.4ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2020-05-06 10:28:09 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (33.8ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.7ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (83.2ms)
+Completed 200 OK in 120ms (Views: 107.4ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 10:31:34 -0400
+Processing by SushisController#new as HTML
+  Parameters: {"new"=>"new"}
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (685.1ms)
+Completed 500 Internal Server Error in 833ms (ActiveRecord: 14.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for #<ActionView::Helpers::FormBuilder:0x00007ff2d142d508>):
+    12:             <%# end %>
+    13: 
+    14:              <%= form_for @sushi do |f| %>
+    15:                 <%= f.text :name %>
+    16:                 <%= f.submit "Create Sushi"%>
+    17:             <% end %>
+    18: 
+  
+app/views/sushis/new.erb:15:in `block in _app_views_sushis_new_erb___1014080657646089661_70340426125080'
+app/views/sushis/new.erb:14:in `_app_views_sushis_new_erb___1014080657646089661_70340426125080'
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 10:31:57 -0400
+Processing by SushisController#new as HTML
+  Parameters: {"new"=>"new"}
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (21.9ms)
+Completed 200 OK in 305ms (Views: 284.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sushis" for 127.0.0.1 at 2020-05-06 10:32:27 -0400
+Processing by SushisController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8hQlawIU0pY7U9DfJnFFdjzAhroTI+WQYKYDOS2RKsm88930BY1jQTvZMytrAwx04OGtKgZ1J56OhHAemXjM9g==", "sushi"=>{"name"=>"new roll"}, "commit"=>"Create Sushi"}
+Completed 500 Internal Server Error in 73046ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sushis_controller.rb:20:in `create'
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 10:33:49 -0400
+Processing by SushisController#new as HTML
+  Parameters: {"new"=>"new"}
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (21.7ms)
+Completed 200 OK in 337ms (Views: 319.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 10:36:39 -0400
+Processing by SushisController#new as HTML
+  Parameters: {"new"=>"new"}
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (62192.1ms)
+Completed 200 OK in 67287ms (Views: 67266.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 10:40:30 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SushisController#new as HTML
+  Parameters: {"new"=>"new"}
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (695.1ms)
+Completed 200 OK in 976ms (Views: 958.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 10:42:15 -0400
+Processing by SushisController#new as HTML
+  Parameters: {"new"=>"new"}
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 10:42:27 -0400
+Processing by SushisController#new as HTML
+  Parameters: {"new"=>"new"}
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (2.9ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 10:43:20 -0400
+Processing by SushisController#new as HTML
+  Parameters: {"new"=>"new"}
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (2.2ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 10:47:53 -0400
+Processing by SushisController#new as HTML
+  Parameters: {"new"=>"new"}
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (4.9ms)
+Completed 200 OK in 38ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-06 11:06:53 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SushisController#home as HTML
+  Rendering sushis/home.html within layouts/application
+  Rendered sushis/home.html within layouts/application (1.5ms)
+Completed 200 OK in 696ms (Views: 686.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-06 11:07:06 -0400
+Processing by SushisController#home as HTML
+  Rendering sushis/home.html within layouts/application
+  Rendered sushis/home.html within layouts/application (0.9ms)
+Completed 200 OK in 208ms (Views: 201.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-06 11:07:08 -0400
+Processing by SushisController#home as HTML
+  Rendering sushis/home.html within layouts/application
+  Rendered sushis/home.html within layouts/application (0.5ms)
+Completed 200 OK in 231ms (Views: 228.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mSushi Load (7.5ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 11:22:01 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (3.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (35.5ms)
+Completed 200 OK in 1590ms (Views: 1519.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 11:22:48 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (4.4ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (14.4ms)
+Completed 200 OK in 76ms (Views: 65.8ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/sushis/1" for 127.0.0.1 at 2020-05-06 11:28:53 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering sushis/show.erb within layouts/application
+  Rendered sushis/show.erb within layouts/application (0.4ms)
+Completed 200 OK in 134ms (Views: 104.0ms)
+
+
+Started GET "/sushis/100" for 127.0.0.1 at 2020-05-06 11:29:20 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"100"}
+  Rendering sushis/show.erb within layouts/application
+  Rendered sushis/show.erb within layouts/application (0.8ms)
+Completed 200 OK in 67ms (Views: 63.4ms)
+
+
+Started GET "/sushis/1000000" for 127.0.0.1 at 2020-05-06 11:29:34 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"1000000"}
+  Rendering sushis/show.erb within layouts/application
+  Rendered sushis/show.erb within layouts/application (1.1ms)
+Completed 200 OK in 93ms (Views: 87.9ms)
+
+
+Started GET "/sushis/1" for 127.0.0.1 at 2020-05-06 11:30:52 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSushi Load (9.0ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering sushis/show.erb within layouts/application
+  Rendered sushis/show.erb within layouts/application (7.8ms)
+Completed 200 OK in 280ms (Views: 67.6ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/sushis/51" for 127.0.0.1 at 2020-05-06 11:30:58 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mSushi Load (1.2ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+Completed 404 Not Found in 9ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Sushi with 'id'=51):
+  
+app/controllers/sushis_controller.rb:15:in `set_sushi'
+Started GET "/rails/info/routes" for 127.0.0.1 at 2020-05-06 11:32:21 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [4 times] (44.0ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (17.0ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 282ms (Views: 89.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2020-05-06 11:33:30 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [4 times] (3.2ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 201ms (Views: 166.4ms)
+
+
+Started GET "/sushis/51" for 127.0.0.1 at 2020-05-06 11:34:50 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mSushi Load (1.0ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+Redirected to http://localhost:3000/sushis
+Completed 302 Found in 23ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 11:34:50 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (1.4ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (20.7ms)
+Completed 200 OK in 96ms (Views: 92.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2020-05-06 11:36:41 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [4 times] (4.3ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 31ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sushis/15" for 127.0.0.1 at 2020-05-06 11:38:43 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mSushi Load (50.8ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering sushis/show.erb within layouts/application
+  Rendered sushis/show.erb within layouts/application (0.8ms)
+Completed 200 OK in 346ms (Views: 89.1ms | ActiveRecord: 53.7ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 11:49:35 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mSushi Load (1.5ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Redirected to http://localhost:3000/sushis
+Completed 302 Found in 20ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 11:49:35 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (10.4ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (37.6ms)
+Completed 200 OK in 141ms (Views: 123.3ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 11:50:07 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Redirected to http://localhost:3000/sushis
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/sushis" for 127.0.0.1 at 2020-05-06 11:50:07 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (0.3ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (3.2ms)
+Completed 200 OK in 51ms (Views: 46.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 11:50:26 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mSushi Load (9.2ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 40718ms (ActiveRecord: 10.3ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/sushis_controller.rb:11:in `show'
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 11:51:18 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (4.8ms)
+Completed 200 OK in 1533ms (Views: 1337.6ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 11:54:11 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (36.5ms)
+Completed 200 OK in 1546ms (Views: 1158.9ms | ActiveRecord: 34.0ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 11:54:32 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (63.0ms)
+Completed 200 OK in 975ms (Views: 895.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sushis" for 127.0.0.1 at 2020-05-06 11:57:13 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/sushis"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 11:58:47 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (267.3ms)
+Completed 200 OK in 3322ms (Views: 1779.0ms | ActiveRecord: 175.9ms)
+
+
+Started POST "/sushis" for 127.0.0.1 at 2020-05-06 11:58:58 -0400
+  
+ActionController::RoutingError (uninitialized constant SushiController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 12:00:09 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (72.4ms)
+Completed 200 OK in 2249ms (Views: 1729.0ms | ActiveRecord: 32.4ms)
+
+
+Started POST "/sushis" for 127.0.0.1 at 2020-05-06 12:00:32 -0400
+Processing by SushisController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dpvbzRTVozDvAKH18FHBXzJl3Qbn9yD9BN8zpLiSLTM4fCNSE0wS5++KQgG9I4hd7kT2lvKh4vPq/UCDDHvLDA==", "name"=>"a new roll", "commit"=>"Create Sushi"}
+Completed 500 Internal Server Error in 56967ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sushis_controller.rb:20:in `create'
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 12:02:03 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (241.1ms)
+Completed 200 OK in 3517ms (Views: 3313.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 12:03:33 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 12:04:14 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 12:07:29 -0400
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (1319.1ms)
+Completed 200 OK in 1839ms (Views: 1800.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sushis" for 127.0.0.1 at 2020-05-06 12:10:42 -0400
+Processing by SushisController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sw69VDItYKPFJZQf+ORCvwZXQIMcna8cx0rwXDzsvTP96UXLNbTRdMWvd+u1lgu92nZrEwnLbRIpaIN7iAVbDA==", "sushi"=>{"name"=>"new roll"}, "commit"=>"Create Sushi"}
+Completed 500 Internal Server Error in 23465ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sushis_controller.rb:20:in `create'
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 12:12:15 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (117.3ms)
+Completed 200 OK in 956ms (Views: 893.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sushis" for 127.0.0.1 at 2020-05-06 12:12:57 -0400
+Processing by SushisController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"izc3v+VMV8IdqgFE1T8vCAr+AD9L/ZJ31flhLkF7hLvF0M8g4tXmFR0g4rCYTWYK1t8rr16rUHk72xIJ9ZJihA==", "name"=>"new roll", "commit"=>"Save "}
+Completed 500 Internal Server Error in 161814ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sushis_controller.rb:20:in `create'
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 12:16:24 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (348.9ms)
+Completed 200 OK in 2475ms (Views: 2166.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 12:17:07 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (134.2ms)
+Completed 200 OK in 939ms (Views: 802.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 12:18:00 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (114.8ms)
+Completed 200 OK in 1361ms (Views: 1300.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sushis/new" for 127.0.0.1 at 2020-05-06 12:18:50 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (266.0ms)
+Completed 200 OK in 2584ms (Views: 2316.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSushis (20180115025443)
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "sushis" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180115025443"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-14 15:13:35.834368"], ["updated_at", "2020-10-14 15:13:35.834368"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Twin Peaks Savings & Loan Seaweed Roll"], ["created_at", "2020-10-14 15:14:18.385497"], ["updated_at", "2020-10-14 15:14:18.385497"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Leo Johnson Roe Roll"], ["created_at", "2020-10-14 15:14:18.389616"], ["updated_at", "2020-10-14 15:14:18.389616"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Railroad Car Tempura Invention"], ["created_at", "2020-10-14 15:14:18.391387"], ["updated_at", "2020-10-14 15:14:18.391387"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Cemetery Roe Invention"], ["created_at", "2020-10-14 15:14:18.392965"], ["updated_at", "2020-10-14 15:14:18.392965"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Albert Rosenfield Raw Invention"], ["created_at", "2020-10-14 15:14:18.394834"], ["updated_at", "2020-10-14 15:14:18.394834"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ronette's Bridge Roe Burrito"], ["created_at", "2020-10-14 15:14:18.396486"], ["updated_at", "2020-10-14 15:14:18.396486"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "One Eyed Jack's Raw Burrito"], ["created_at", "2020-10-14 15:14:18.398291"], ["updated_at", "2020-10-14 15:14:18.398291"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Nadine Hurley Tempura Roll"], ["created_at", "2020-10-14 15:14:18.400023"], ["updated_at", "2020-10-14 15:14:18.400023"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Town Hall Seaweed Burrito"], ["created_at", "2020-10-14 15:14:18.401340"], ["updated_at", "2020-10-14 15:14:18.401340"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "MIKE Roe Roll"], ["created_at", "2020-10-14 15:14:18.402781"], ["updated_at", "2020-10-14 15:14:18.402781"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Jerry Horne Tempura Invention"], ["created_at", "2020-10-14 15:14:18.404389"], ["updated_at", "2020-10-14 15:14:18.404389"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Horne's Department Store Raw Invention"], ["created_at", "2020-10-14 15:14:18.406331"], ["updated_at", "2020-10-14 15:14:18.406331"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Andy Brennan Seaweed Delight"], ["created_at", "2020-10-14 15:14:18.407716"], ["updated_at", "2020-10-14 15:14:18.407716"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Leland Palmer Seaweed Invention"], ["created_at", "2020-10-14 15:14:18.409232"], ["updated_at", "2020-10-14 15:14:18.409232"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Double-R Diner Roe Delight"], ["created_at", "2020-10-14 15:14:18.410773"], ["updated_at", "2020-10-14 15:14:18.410773"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Fat Trout Trailer Park Seaweed Burrito"], ["created_at", "2020-10-14 15:14:18.412448"], ["updated_at", "2020-10-14 15:14:18.412448"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Eileen Hayward Raw Burrito"], ["created_at", "2020-10-14 15:14:18.414119"], ["updated_at", "2020-10-14 15:14:18.414119"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Mike Nelson Raw Invention"], ["created_at", "2020-10-14 15:14:18.416551"], ["updated_at", "2020-10-14 15:14:18.416551"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Gordon Cole Raw Cone"], ["created_at", "2020-10-14 15:14:18.419987"], ["updated_at", "2020-10-14 15:14:18.419987"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "High School Tempura Burrito"], ["created_at", "2020-10-14 15:14:18.421805"], ["updated_at", "2020-10-14 15:14:18.421805"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ghostwood National Forest Roe Invention"], ["created_at", "2020-10-14 15:14:18.423823"], ["updated_at", "2020-10-14 15:14:18.423823"]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "The Man from Another Place Roe Invention"], ["created_at", "2020-10-14 15:14:18.425523"], ["updated_at", "2020-10-14 15:14:18.425523"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bookhouse Raw Burrito"], ["created_at", "2020-10-14 15:14:18.427417"], ["updated_at", "2020-10-14 15:14:18.427417"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Josie Packard Roe Delight"], ["created_at", "2020-10-14 15:14:18.429206"], ["updated_at", "2020-10-14 15:14:18.429206"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Catherine Martell Tempura Invention"], ["created_at", "2020-10-14 15:14:18.431136"], ["updated_at", "2020-10-14 15:14:18.431136"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Harold Smith Roe Invention"], ["created_at", "2020-10-14 15:14:18.432871"], ["updated_at", "2020-10-14 15:14:18.432871"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Easter Park Raw Cone"], ["created_at", "2020-10-14 15:14:18.434528"], ["updated_at", "2020-10-14 15:14:18.434528"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Black Lodge Raw Invention"], ["created_at", "2020-10-14 15:14:18.436263"], ["updated_at", "2020-10-14 15:14:18.436263"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Dead Dog Farm Seaweed Cone"], ["created_at", "2020-10-14 15:14:18.437965"], ["updated_at", "2020-10-14 15:14:18.437965"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "James Hurley Raw Delight"], ["created_at", "2020-10-14 15:14:18.439993"], ["updated_at", "2020-10-14 15:14:18.439993"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Hank Jennings Seaweed Burrito"], ["created_at", "2020-10-14 15:14:18.441945"], ["updated_at", "2020-10-14 15:14:18.441945"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "FBI Office Roe Invention"], ["created_at", "2020-10-14 15:14:18.443535"], ["updated_at", "2020-10-14 15:14:18.443535"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Calhoun Memorial Hospital Seaweed Delight"], ["created_at", "2020-10-14 15:14:18.445181"], ["updated_at", "2020-10-14 15:14:18.445181"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Dr Jacoby Roe Cone"], ["created_at", "2020-10-14 15:14:18.446552"], ["updated_at", "2020-10-14 15:14:18.446552"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Killer BOB Roe Roll"], ["created_at", "2020-10-14 15:14:18.448039"], ["updated_at", "2020-10-14 15:14:18.448039"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Phillip Jeffries Roe Delight"], ["created_at", "2020-10-14 15:14:18.449706"], ["updated_at", "2020-10-14 15:14:18.449706"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Norma Jennings Roe Invention"], ["created_at", "2020-10-14 15:14:18.451272"], ["updated_at", "2020-10-14 15:14:18.451272"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sarah Palmer Raw Burrito"], ["created_at", "2020-10-14 15:14:18.452842"], ["updated_at", "2020-10-14 15:14:18.452842"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "John Justice Wheeler Seaweed Burrito"], ["created_at", "2020-10-14 15:14:18.454639"], ["updated_at", "2020-10-14 15:14:18.454639"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Big Ed's Gas Farm Roe Burrito"], ["created_at", "2020-10-14 15:14:18.457402"], ["updated_at", "2020-10-14 15:14:18.457402"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bernard Renault Seaweed Burrito"], ["created_at", "2020-10-14 15:14:18.459755"], ["updated_at", "2020-10-14 15:14:18.459755"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Lucy Moran Tempura Burrito"], ["created_at", "2020-10-14 15:14:18.461613"], ["updated_at", "2020-10-14 15:14:18.461613"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sheriff's Department Raw Delight"], ["created_at", "2020-10-14 15:14:18.463424"], ["updated_at", "2020-10-14 15:14:18.463424"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Log Lady's Cabin Tempura Burrito"], ["created_at", "2020-10-14 15:14:18.470272"], ["updated_at", "2020-10-14 15:14:18.470272"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Major Briggs Tempura Delight"], ["created_at", "2020-10-14 15:14:18.476270"], ["updated_at", "2020-10-14 15:14:18.476270"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "The Giant Seaweed Delight"], ["created_at", "2020-10-14 15:14:18.478055"], ["updated_at", "2020-10-14 15:14:18.478055"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Wind River Roe Cone"], ["created_at", "2020-10-14 15:14:18.481774"], ["updated_at", "2020-10-14 15:14:18.481774"]]
+  [1m[35m (32.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Harriet Hayward Raw Burrito"], ["created_at", "2020-10-14 15:14:18.515529"], ["updated_at", "2020-10-14 15:14:18.515529"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bobby Briggs Tempura Cone"], ["created_at", "2020-10-14 15:14:18.518244"], ["updated_at", "2020-10-14 15:14:18.518244"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Doc Hayward Tempura Roll"], ["created_at", "2020-10-14 15:14:18.520438"], ["updated_at", "2020-10-14 15:14:18.520438"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSushi Load (1.0ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/rails/info/routes" for ::1 at 2020-10-14 11:18:08 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (10.4ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.3ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 31ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-10-14 11:21:13 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [3 times] (1.3ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 11ms (Views: 8.6ms)
+
+
+Started GET "/sushis" for ::1 at 2020-10-14 11:24:04 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (1.4ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (12.6ms)
+Completed 200 OK in 266ms (Views: 261.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-10-14 11:30:56 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [3 times] (2.6ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 13ms (Views: 10.6ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-10-14 11:31:21 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [4 times] (2.6ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 11ms (Views: 9.3ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-10-14 11:33:50 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [4 times] (1.9ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 25ms (Views: 13.1ms)
+
+
+Started GET "/sushis/3" for ::1 at 2020-10-14 11:37:25 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSushi Load (0.5ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering sushis/show.erb within layouts/application
+  Rendered sushis/show.erb within layouts/application (0.7ms)
+Completed 200 OK in 63ms (Views: 31.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/sushis/51" for ::1 at 2020-10-14 11:37:36 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mSushi Load (0.5ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Sushi with 'id'=51):
+  
+app/controllers/sushis_controller.rb:15:in `set_sushi'
+Started GET "/rails/info/routes" for ::1 at 2020-10-14 11:38:47 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [4 times] (2.1ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 13ms (Views: 9.4ms)
+
+
+Started GET "/sushis/51" for ::1 at 2020-10-14 11:39:00 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mSushi Load (0.7ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+Redirected to http://localhost:3000/sushis
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/sushis" for ::1 at 2020-10-14 11:39:00 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (0.6ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (5.6ms)
+Completed 200 OK in 89ms (Views: 86.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/sushis/127" for ::1 at 2020-10-14 11:39:08 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"127"}
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+Redirected to http://localhost:3000/sushis
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/sushis" for ::1 at 2020-10-14 11:39:08 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (1.3ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sushis/2" for ::1 at 2020-10-14 11:39:20 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering sushis/show.erb within layouts/application
+  Rendered sushis/show.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sushis/2" for ::1 at 2020-10-14 11:39:52 -0400
+Processing by SushisController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT  "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering sushis/show.erb within layouts/application
+  Rendered sushis/show.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sushis" for ::1 at 2020-10-14 11:40:00 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.erb within layouts/application
+  [1m[36mSushi Load (0.4ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  Rendered sushis/index.erb within layouts/application (2.2ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-10-14 11:42:27 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb [5 times] (1.5ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.1.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/corinnamoore/.rvm/gems/ruby-2.6.1/gems/railties-5.1.7/lib/rails/templates/rails/info/routes.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 20ms (Views: 10.1ms)
+
+
+Started GET "/sushis/new" for ::1 at 2020-10-14 11:54:00 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (4.0ms)
+Completed 200 OK in 84ms (Views: 64.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/sushis/new" for ::1 at 2020-10-14 11:54:26 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (1.5ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sushis/new" for ::1 at 2020-10-14 11:59:48 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (1190.1ms)
+Completed 200 OK in 1222ms (Views: 1219.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sushis/new" for ::1 at 2020-10-14 12:02:11 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (1.4ms)
+Completed 200 OK in 141ms (Views: 139.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sushis/new" for ::1 at 2020-10-14 12:04:15 -0400
+Processing by SushisController#new as HTML
+  Rendering sushis/new.erb within layouts/application
+  Rendered sushis/new.erb within layouts/application (2.3ms)
+Completed 200 OK in 146ms (Views: 143.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sushis" for ::1 at 2020-10-14 12:04:36 -0400
+Processing by SushisController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vq2X1TjTA/SAOC9dsc7K8cUhs0ppqYQn76ATCNkj+MYucnFFCt51noIzVvO6sAMKSx86IWmdfXFiW0nKRVefTw==", "sushi"=>{"name"=>"a new sushi"}, "commit"=>"Create Sushi"}
+No template found for SushisController#create, rendering head :no_content
+Completed 204 No Content in 339563ms (ActiveRecord: 0.0ms)
+
+
